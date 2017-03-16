@@ -1,0 +1,3 @@
+export const FILTER = 'FILTER';
+export const FETCH_ART_SUCCESS = 'FETCH_ART_SUCCESS';
+export const FETCH_ARTIST_SUCCESS = 'FETCH_ARTIST_SUCCESS';

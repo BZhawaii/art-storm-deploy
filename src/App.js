@@ -1,21 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'babel-polyfill';
+import React from 'react';
+import { render } from 'react-dom';
+import { browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
+import { AppContainer } from 'react-hot-loader';
+import configureStore from './store/configureStore';
+import Root from './containers/Root';
+// import NavBar from './components/navBar';
+// import Hero from './components/hero';
+// import Artists from './components/artists';
+// import Parallax from './components/parallax';
+// import Team from './components/team';
+// import Footer from './components/footer';
+// import SignUp from './components/signup';
+// import SignIn from './components/signin';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+
+const store = configureStore();
+const history = syncHistoryWithStore(browserHistory, store);
+
+render(
+    <AppContainer>
+        <Root store={store} history={history} />
+    </AppContainer>,
+    document.getElementById('root')
+);
+
+if (module.hot) {
+    module.hot.accept('./containers/Root', () => {
+        const NewRoot = require('./containers/Root').default;
+        render(
+            <AppContainer>
+                <NewRoot store={store} history={history} />
+            </AppContainer>,
+            document.getElementById('root')
+        );
+    });
 }
-
-export default App;

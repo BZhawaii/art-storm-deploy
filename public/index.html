@@ -1,31 +1,369 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tag above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+   <meta name="theme-color" content="#2196F3 ">
+   <title>Art Storm</title>
+
+   <!-- CSS  -->
+   <link href="min/custom-min.css" type="text/css" rel="stylesheet" />
+   <link href="min/plugin-min.css" type="text/css" rel="stylesheet" />
+   <link href="../src/css/styles2.css" />
+   <!--
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+   <!-- <% if (htmlWebpackPlugin.options.trackJSToken) { %>
+   <script>window._trackJs = {token: '<%= htmlWebpackPlugin.options.trackJSToken %>'};</script>
+   <script src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js"></script>
+   <% } %> -->
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta charset="utf-8"/>
+   <title>Fusion Starter</title> -->
+ </head>
+ <body id="top" class="scrollspy">
 
-      To begin the development, run `npm start`.
-      To create a production bundle, use `npm run build`.
-    -->
-  </body>
+   <div id="loader-wrapper">
+     <div id="loader"></div>
+     <div class="loader-section section-left"></div>
+     <div class="loader-section section-right"></div>
+   </div>
+
+
+   <!--Navigation-->
+    <div class="navbar-fixed">
+       <nav id="nav_f" class="default_color" role="navigation">
+           <div class="container">
+               <div class="nav-wrapper">
+               <a href="#" id="logo-container" class="brand-logo">Art Storm</a>
+                   <ul class="right hide-on-med-and-down">
+                       <li><a href="#work">Artists</a></li>
+                       <li><a href="/formArtists">Sign Up</a></li>
+                       <li><a href="#contact">Sign In</a></li>
+                   </ul>
+                   <ul id="nav-mobile" class="side-nav">
+                       <li><a href="#intro">Service</a></li>
+                       <li><a href="#work">Work</a></li>
+                       <li><a href="#team">Team</a></li>
+                       <li><a href="#contact">Contact</a></li>
+                   </ul>
+               <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+               </div>
+           </div>
+       </nav>
+   </div>
+
+   <!--Hero-->
+   <div class="section no-pad-bot" id="index-banner">
+       <div class="container">
+           <h1 class="text_h center header cd-headline letters type">
+               <span>Where artists and art lovers</span>
+               <span class="cd-words-wrapper waiting">
+                   <b class="is-visible">gather.</b>
+                   <b>collaborate.</b>
+                   <b>meet.</b>
+               </span>
+           </h1>
+       </div>
+   </div>
+
+
+   <div id="root"></div>
+   <!--Artists-->
+   <div class="section scrollspy" id="work">
+       <div class="container">
+           <h2 class="header text_b"></h2>
+           <div class="row">
+
+               <div class="col s12 m4 l4">
+                   <div class="card">
+                       <div class="card-image waves-effect waves-block waves-light">
+                           <img class="activator" src="app/img/project1.jpg">
+                       </div>
+                       <div class="card-content">
+                           <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
+                           <p><a href="#">Project link</a></p>
+                       </div>
+                       <div class="card-reveal">
+                           <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                           <p>Here is some more information about this project that is only revealed once clicked on.</p>
+                       </div>
+                   </div>
+               </div>
+
+               <div class="col s12 m4 l4">
+                   <div class="card">
+                       <div class="card-image waves-effect waves-block waves-light">
+                           <img class="activator" src="app/img/project2.jpeg">
+                       </div>
+                       <div class="card-content">
+                           <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
+                           <p><a href="#">Project link</a></p>
+                       </div>
+                       <div class="card-reveal">
+                           <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                           <p>Here is some more information about this project that is only revealed once clicked on.</p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col s12 m4 l4">
+                   <div class="card">
+                       <div class="card-image waves-effect waves-block waves-light">
+                           <img class="activator" src="app/img/project3.png">
+                       </div>
+                       <div class="card-content">
+                           <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
+                           <p><a href="#">Project link</a></p>
+                       </div>
+                       <div class="card-reveal">
+                           <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                           <p>Here is some more information about this project that is only revealed once clicked on.</p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col s12 m4 l4">
+                   <div class="card">
+                       <div class="card-image waves-effect waves-block waves-light">
+                           <img class="activator" src="app/img/project4.jpg">
+                       </div>
+                       <div class="card-content">
+                           <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
+                           <p><a href="#">Project link</a></p>
+                       </div>
+                       <div class="card-reveal">
+                           <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                           <p>Here is some more information about this project that is only revealed once clicked on.</p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col s12 m4 l4">
+                   <div class="card">
+                       <div class="card-image waves-effect waves-block waves-light">
+                           <img class="activator" src="app/img/project5.png">
+                       </div>
+                       <div class="card-content">
+                           <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
+                           <p><a href="#">Project link</a></p>
+                       </div>
+                       <div class="card-reveal">
+                           <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                           <p>Here is some more information about this project that is only revealed once clicked on.</p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col s12 m4 l4">
+                   <div class="card">
+                       <div class="card-image waves-effect waves-block waves-light">
+                           <img class="activator" src="app/img/project6.jpeg">
+                       </div>
+                       <div class="card-content">
+                           <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
+                           <p><a href="#">Project link</a></p>
+                       </div>
+                       <div class="card-reveal">
+                           <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                           <p>Here is some more information about this project that is only revealed once clicked on.</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <!--Parallax-->
+   <div class="parallax-container">
+       <div class="parallax"><img src="app/img/parallax1.png"></div>
+   </div>
+
+   <!--Team-->
+   <div class="section scrollspy" id="team">
+       <div class="container">
+           <h2 class="header text_b"> Our Team </h2>
+           <div class="row">
+               <div class="col s12 m3">
+                   <div class="card card-avatar">
+                       <div class="waves-effect waves-block waves-light">
+                           <img class="activator" src="app/img/avatar1.png">
+                       </div>
+                       <div class="card-content">
+                           <span class="card-title activator grey-text text-darken-4">BZ<br/>
+                               <small><em><a class="red-text text-darken-1" href="#">Developer<br>Front End</a></em></small></span>
+                           <p>
+                               <a class="blue-text text-lighten-2" href="https://www.facebook.com">
+                                   <i class="fa fa-facebook-square"></i>
+                               </a>
+                               <a class="blue-text text-lighten-2" href="https://twitter.com">
+                                   <i class="fa fa-twitter-square"></i>
+                               </a>
+                               <a class="blue-text text-lighten-2" href="https://plus.google.com">
+                                   <i class="fa fa-google-plus-square"></i>
+                               </a>
+                               <a class="blue-text text-lighten-2" href="https://www.linkedin.com">
+                                   <i class="fa fa-linkedin-square"></i>
+                               </a>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col s12 m3">
+                   <div class="card card-avatar">
+                       <div class="waves-effect waves-block waves-light">
+                           <img class="activator" src="app/img/avatar2.png">
+                       </div>
+                       <div class="card-content">
+                           <span class="card-title activator grey-text text-darken-4">Tara<br/>
+                               <small><em><a class="red-text text-darken-1" href="#">Developer<br>Front End</a></em></small>
+                           </span>
+                           <p>
+                               <a class="blue-text text-lighten-2" href="https://www.facebook.com">
+                                   <i class="fa fa-facebook-square"></i>
+                               </a>
+                               <a class="blue-text text-lighten-2" href="https://twitter.com">
+                                   <i class="fa fa-twitter-square"></i>
+                               </a>
+                               <a class="blue-text text-lighten-2" href="https://plus.google.com">
+                                   <i class="fa fa-google-plus-square"></i>
+                               </a>
+                               <a class="blue-text text-lighten-2" href="https://www.linkedin.com">
+                                   <i class="fa fa-linkedin-square"></i>
+                               </a>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col s12 m3">
+                   <div class="card card-avatar">
+                       <div class="waves-effect waves-block waves-light">
+                           <img class="activator" src="app/img/avatar3.png">
+                       </div>
+                       <div class="card-content">
+                           <span class="card-title activator grey-text text-darken-4">
+                               Anthony<br/>
+                               <small><em><a class="red-text text-darken-1" href="#">Developer<br>Back End</a></em></small></span>
+                           <p>
+                               <a class="blue-text text-lighten-2" href="https://www.facebook.com">
+                                   <i class="fa fa-facebook-square"></i>
+                               </a>
+                               <a class="blue-text text-lighten-2" href="https://twitter.com">
+                                   <i class="fa fa-twitter-square"></i>
+                               </a>
+                               <a class="blue-text text-lighten-2" href="https://plus.google.com">
+                                   <i class="fa fa-google-plus-square"></i>
+                               </a>
+                               <a class="blue-text text-lighten-2" href="https://www.linkedin.com">
+                                   <i class="fa fa-linkedin-square"></i>
+                               </a>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col s12 m3">
+                   <div class="card card-avatar">
+                       <div class="waves-effect waves-block waves-light">
+                           <img class="activator" src="app/img/avatar4.png">
+                       </div>
+                       <div class="card-content">
+                           <span class="card-title activator grey-text text-darken-4">Ethan<br/>
+                               <small><em><a class="red-text text-darken-1" href="#">Developer<br>Back End</a></em></small></span>
+                           <p>
+                               <a class="blue-text text-lighten-2" href="https://www.facebook.com">
+                                   <i class="fa fa-facebook-square"></i>
+                               </a>
+                               <a class="blue-text text-lighten-2" href="https://twitter.com">
+                                   <i class="fa fa-twitter-square"></i>
+                               </a>
+                               <a class="blue-text text-lighten-2" href="https://plus.google.com">
+                                   <i class="fa fa-google-plus-square"></i>
+                               </a>
+                               <a class="blue-text text-lighten-2" href="https://www.linkedin.com">
+                                   <i class="fa fa-linkedin-square"></i>
+                               </a>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <!--Footer-->
+   <footer id="contact" class="page-footer default_color scrollspy">
+       <div class="container">
+           <div class="row">
+               <div class="col l12 s12">
+                   <form class="col s12" action="contact.php" method="post">
+                       <div class="row">
+                           <div class="input-field col s6">
+                               <i class="mdi-action-account-circle prefix white-text"></i>
+                               <input id="icon_prefix" name="name" type="text" class="validate white-text">
+                               <label for="icon_prefix" class="white-text">First Name</label>
+                           </div>
+                           <div class="input-field col s6">
+                               <i class="mdi-communication-email prefix white-text"></i>
+                               <input id="icon_email" name="email" type="email" class="validate white-text">
+                               <label for="icon_email" class="white-text">Email</label>
+                           </div>
+                           <div class="input-field col s12">
+                               <i class="mdi-editor-mode-edit prefix white-text"></i>
+                               <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
+                               <label for="icon_prefix2" class="white-text">Message</label>
+                           </div>
+                           <div class="col offset-s7 s5">
+                               <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
+                                   <i class="mdi-content-send right white-text"></i>
+                               </button>
+                           </div>
+                       </div>
+                   </form>
+               </div>
+               <!-- <div class="col l3 s12">
+                   <h5 class="white-text"></h5>
+                   <ul>
+                       <li><a class="white-text" href="http://www.joashpereira.com/">Home</a></li>
+                       <li><a class="white-text" href="http://www.joashpereira.com/blog">Blog</a></li>
+                   </ul>
+               </div> -->
+               <!-- <div class="col l3 s12">
+                   <h5 class="white-text"></h5>
+                   <ul>
+                       <li>
+                           <a class="white-text" href="https://www.behance.net">
+                               <i class="small fa fa-behance-square white-text"></i> Behance
+                           </a>
+                       </li>
+                       <li>
+                           <a class="white-text" href="https://www.facebook.com">
+                               <i class="small fa fa-facebook-square white-text"></i> Facebook
+                           </a>
+                       </li>
+                       <li>
+                           <a class="white-text" href="https://github.com">
+                               <i class="small fa fa-github-square white-text"></i> Github
+                           </a>
+                       </li>
+                       <li>
+                           <a class="white-text" href="https://www.linkedin.com">
+                               <i class="small fa fa-linkedin-square white-text"></i> Linkedin
+                           </a>
+                       </li>
+                   </ul>
+               </div> -->
+           </div>
+       </div>
+       <div class="footer-copyright default_color">
+           <div class="container">
+             Beat Media Inc, 2017
+           </div>
+       </div>
+   </footer>
+
+
+
+
+   <!--  Scripts-->
+   <script src="min/plugin-min.js"></script>
+   <script src="min/custom-min.js"></script>
+ </body>
 </html>
