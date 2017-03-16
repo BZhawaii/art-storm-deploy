@@ -14,7 +14,7 @@ class ArtistDetailsPage extends React.Component {
 
     render() {
       let data = artistData.filter((p) => {
-        return p.id == 1;
+        return p.id === 1;
       })
 
       let p = data[0]

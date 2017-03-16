@@ -11,7 +11,7 @@
    <!-- CSS  -->
    <link href="min/custom-min.css" type="text/css" rel="stylesheet" />
    <link href="min/plugin-min.css" type="text/css" rel="stylesheet" />
-   <link href="../src/css/styles2.css" />
+   <link href="css/styles2.css" rel="stylesheet"/>
    <!--
     -->
    <!-- <% if (htmlWebpackPlugin.options.trackJSToken) { %>
@@ -31,9 +31,10 @@
      <div class="loader-section section-right"></div>
    </div>
 
+   <div id="root"></div>
 
    <!--Navigation-->
-    <div class="navbar-fixed">
+    <div class="navbar-fixed stormNav">
        <nav id="nav_f" class="default_color" role="navigation">
            <div class="container">
                <div class="nav-wrapper">
@@ -69,8 +70,6 @@
        </div>
    </div>
 
-
-   <div id="root"></div>
    <!--Artists-->
    <div class="section scrollspy" id="work">
        <div class="container">
@@ -80,7 +79,7 @@
                <div class="col s12 m4 l4">
                    <div class="card">
                        <div class="card-image waves-effect waves-block waves-light">
-                           <img class="activator" src="app/img/project1.jpg">
+                           <img class="activator" src="img/project1.jpg">
                        </div>
                        <div class="card-content">
                            <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -96,7 +95,7 @@
                <div class="col s12 m4 l4">
                    <div class="card">
                        <div class="card-image waves-effect waves-block waves-light">
-                           <img class="activator" src="app/img/project2.jpeg">
+                           <img class="activator" src="img/project2.jpeg">
                        </div>
                        <div class="card-content">
                            <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -111,7 +110,7 @@
                <div class="col s12 m4 l4">
                    <div class="card">
                        <div class="card-image waves-effect waves-block waves-light">
-                           <img class="activator" src="app/img/project3.png">
+                           <img class="activator" src="img/project3.png">
                        </div>
                        <div class="card-content">
                            <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -126,7 +125,7 @@
                <div class="col s12 m4 l4">
                    <div class="card">
                        <div class="card-image waves-effect waves-block waves-light">
-                           <img class="activator" src="app/img/project4.jpg">
+                           <img class="activator" src="img/project4.jpg">
                        </div>
                        <div class="card-content">
                            <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -141,7 +140,7 @@
                <div class="col s12 m4 l4">
                    <div class="card">
                        <div class="card-image waves-effect waves-block waves-light">
-                           <img class="activator" src="app/img/project5.png">
+                           <img class="activator" src="img/project5.png">
                        </div>
                        <div class="card-content">
                            <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -156,7 +155,7 @@
                <div class="col s12 m4 l4">
                    <div class="card">
                        <div class="card-image waves-effect waves-block waves-light">
-                           <img class="activator" src="app/img/project6.jpeg">
+                           <img class="activator" src="img/project6.jpeg">
                        </div>
                        <div class="card-content">
                            <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -174,7 +173,7 @@
 
    <!--Parallax-->
    <div class="parallax-container">
-       <div class="parallax"><img src="app/img/parallax1.png"></div>
+       <div class="parallax"><img src="img/parallax1.png"></div>
    </div>
 
    <!--Team-->
@@ -185,7 +184,7 @@
                <div class="col s12 m3">
                    <div class="card card-avatar">
                        <div class="waves-effect waves-block waves-light">
-                           <img class="activator" src="app/img/avatar1.png">
+                           <img class="activator" src="img/avatar1.png">
                        </div>
                        <div class="card-content">
                            <span class="card-title activator grey-text text-darken-4">BZ<br/>
@@ -210,7 +209,7 @@
                <div class="col s12 m3">
                    <div class="card card-avatar">
                        <div class="waves-effect waves-block waves-light">
-                           <img class="activator" src="app/img/avatar2.png">
+                           <img class="activator" src="img/avatar2.png">
                        </div>
                        <div class="card-content">
                            <span class="card-title activator grey-text text-darken-4">Tara<br/>
@@ -236,7 +235,7 @@
                <div class="col s12 m3">
                    <div class="card card-avatar">
                        <div class="waves-effect waves-block waves-light">
-                           <img class="activator" src="app/img/avatar3.png">
+                           <img class="activator" src="img/avatar3.png">
                        </div>
                        <div class="card-content">
                            <span class="card-title activator grey-text text-darken-4">
@@ -262,7 +261,7 @@
                <div class="col s12 m3">
                    <div class="card card-avatar">
                        <div class="waves-effect waves-block waves-light">
-                           <img class="activator" src="app/img/avatar4.png">
+                           <img class="activator" src="img/avatar4.png">
                        </div>
                        <div class="card-content">
                            <span class="card-title activator grey-text text-darken-4">Ethan<br/>
@@ -289,7 +288,7 @@
    </div>
 
    <!--Footer-->
-   <footer id="contact" class="page-footer default_color scrollspy">
+    <footer id="contact" class="page-footer default_color scrollspy">
        <div class="container">
            <div class="row">
                <div class="col l12 s12">
@@ -318,6 +317,8 @@
                        </div>
                    </form>
                </div>
+
+
                <!-- <div class="col l3 s12">
                    <h5 class="white-text"></h5>
                    <ul>
@@ -325,7 +326,7 @@
                        <li><a class="white-text" href="http://www.joashpereira.com/blog">Blog</a></li>
                    </ul>
                </div> -->
-               <!-- <div class="col l3 s12">
+                <!-- <div class="col l3 s12">
                    <h5 class="white-text"></h5>
                    <ul>
                        <li>
@@ -349,7 +350,7 @@
                            </a>
                        </li>
                    </ul>
-               </div> -->
+               </div>  -->
            </div>
        </div>
        <div class="footer-copyright default_color">

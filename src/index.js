@@ -1,9 +1,53 @@
+import 'babel-polyfill';
 import React from 'react';
+import { render } from 'react-dom';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import { browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
+import { AppContainer } from 'react-hot-loader';
+import configureStore from './store/configureStore';
+import Root from './containers/Root';
+import NavBar from './components/navBar';
+import Hero from './components/hero';
+import Artists from './components/artists';
+import Parallax from './components/parallax';
+import Team from '../src/components/team';
+import Footer from '../src/components/footer';
+// import SignUp from './components/signup';
+// import SignIn from './components/signin';
+
+
+const store = configureStore();
+const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+  <div>
+    <NavBar/>
+    <Hero/>
+    <AppContainer>
+        <Root store={store} history={history} />
+    </AppContainer>
+    <Parallax/>
+    <Team/>
+  </div>,
+    document.getElementById('root')
 );
+
+if (module.hot) {
+    module.hot.accept('./containers/Root', () => {
+        const NewRoot = require('./containers/Root').default;
+        render(
+            <AppContainer>
+                <NewRoot store={store} history={history} />
+            </AppContainer>,
+            document.getElementById('root')
+        );
+    });
+}
+
+export default Root;
+
+// ReactDOM.render(
+//   <Root />,
+//   document.getElementById('root')
+// );
