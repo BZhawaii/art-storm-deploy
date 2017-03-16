@@ -1,8 +1,8 @@
 
 
-.default_color{background-color: pink !important}
+.default_color{background-color: blue !important}
 
-.default_color_text{color: pink !important}
+.default_color_text{color: blue !important}
 
 .icon-block {
     padding: 0 15px;
@@ -15,7 +15,7 @@
     min-height: 632px;
     max-height: 864px;
     position: relative;
-    background-color: pink;
+    background-color: blue;
 }
 
 #nav_f{
